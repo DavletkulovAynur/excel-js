@@ -10,14 +10,12 @@ export class Toolbar extends ExcelComponent {
     });
   }
 
-
-
   toHTML() {
-    function countRabbits() {
-      console.log('super')
-    }
+    // function countRabbits() {
+    //   console.log('super')
+    // }
     return `
-        <div class="button" onclick="console.log('!!!??? почему не вызывается функция')">
+        <div class="button" onclick="console.log('!!!??? почему не выз функ')">
             <i class="material-icons">format_align_left</i>
         </div>
 

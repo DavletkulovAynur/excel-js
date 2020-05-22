@@ -7,8 +7,8 @@ export class Formula extends ExcelComponent {
       name: 'Formula',
       listeners: ['input', 'click'],
     });
-    console.log('Formula', $root)
   }
+
   toHTML() {
     return `
         <div class="info">fx</div>

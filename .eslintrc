@@ -9,7 +9,8 @@
     "semi": "off",
     "require-jsdoc": "off",
     "no-trailing-spaces": "off",
-    "operator-linebreak": "off"
+    "operator-linebreak": "off",
+    "linebreak-style": 0
   },
   "extends": ["eslint:recommended", "google"]
 }
