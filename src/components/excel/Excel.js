@@ -19,7 +19,7 @@ export class Excel {
       $root.append($el)
       return component
     })
-    console.log('Excel', $root)
+
     return $root
   }
 

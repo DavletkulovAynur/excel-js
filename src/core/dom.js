@@ -6,9 +6,8 @@ class Dom {
   }
 
   html(html) {
-    if(typeof html === 'string') {
+    if (typeof html === 'string') {
       this.$el.innerHTML = html
-      console.log('dom html', this)
       return this // ? ? ?
     }
     return this.$el.outerHTML
@@ -38,6 +37,48 @@ class Dom {
     }
     
     return this
+  }
+
+  closest(selector) {
+    return $(this.$el.closest(selector))
+  }
+
+  getCoords() {
+    return this.$el.getBoundingClientRect()
+  }
+
+  get data() {
+    return this.$el.dataset
+  }
+
+  findAll(selector) {
+    return this.$el.querySelectorAll(selector)
+  }
+
+
+  /*
+
+  {
+    height: '30px',
+    width: '42px',
+    backgroundColor: red
+    }
+
+  */
+
+  css(styles = {}) {
+    // РЕАЛИЗАЦИЯ ЗАДАЧИ ПРИ ПОМОЩИ ЦИКЛА FOR IN
+    // let test = ''
+    // for (const key in styles) {
+    //   if ({}.hasOwnProperty.call(styles, key)) {
+    //     test = '' + (`${key} : ${styles[key]}`)
+    //   }
+    // }
+    // this.$el.setAttribute('style', test)
+
+    Object.keys(styles).forEach((key) => {
+      this.$el.style[key] = styles[key]
+    })
   }
 }
 
