@@ -1,7 +1,6 @@
 export class Emitter {
   constructor() {
     this.listeners = {}
-    console.log(this.listeners)
   }
 
   // dispatch  уведомляем
