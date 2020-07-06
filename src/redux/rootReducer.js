@@ -4,6 +4,7 @@ import {
   TABLE_RESIZE,
   APPLY_STYLE,
   CHANGE_HEADER,
+  UPDATE_DATE,
 } from '@/redux/types'
 
 export function rootReducer(state, action) {
@@ -38,6 +39,9 @@ export function rootReducer(state, action) {
     case CHANGE_HEADER:
       field = 'headerText'
       return {...state, [field]: action.data}
+
+    case UPDATE_DATE:
+      return {...state, openedDate: new Date().toJSON()}
 
     default: return state
   }

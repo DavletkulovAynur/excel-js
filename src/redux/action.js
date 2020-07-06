@@ -4,6 +4,7 @@ import {
   CHANGE_TEXT,
   APPLY_STYLE,
   CHANGE_HEADER,
+  UPDATE_DATE,
 } from '@/redux/types'
 
 export function tableResize(data) {
@@ -40,5 +41,11 @@ export function changeHeader(data) {
   return {
     type: CHANGE_HEADER,
     data,
+  }
+}
+
+export function updateDate() {
+  return {
+    type: UPDATE_DATE,
   }
 }
